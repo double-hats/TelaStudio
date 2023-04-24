@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+  
+</head>
+<body>
+  <div class="environment-container">
+    <div class="calculator">
+      <div class="display-area">
+        <p class="calc-brand"><span>Tela</span>Studio</p>
+
+        <div class="display-box">
+          <p class="after-calculation"></p>
+          <p class="calculation-input"></p>
+        </div>
+
+      </div>
+      <div class="top-operations">
+        <button onclick="
+          localStorage.removeItem('calculation');
+          calculation = '0';
+          document.querySelector('.calculation-input').innerHTML = calculation;
+          document.querySelector('.after-calculation').innerHTML = '';
+          ">CE</button>
+        <button onclick="
+          addToCalculation('%')
+        ">%</button>
+        <button onclick="
+          addToCalculation('/')
+        ">/</button>
+        <button onclick="
+          addToCalculation('-')
+        ">-</button>
+      </div>
+      <div class="side-and-number">
+        <div class="number-input">
+          <div class="one-three">
+            <button onclick="
+              addToCalculation('1')
+            ">1</button>
+            <button onclick="
+              addToCalculation('2');
+            ">2</button>
+            <button onclick="
+              addToCalculation('3');
+            ">3</button>
+          </div>
+          <div class="four-six">
+            <button onclick="
+              addToCalculation('4');
+            ">4</button>
+            <button onclick="
+              addToCalculation('5')
+            ">5</button>
+            <button onclick="
+              addToCalculation('6')
+            ">6</button>
+          </div>
+          <div class="seven-nine">
+            <button onclick="
+              addToCalculation('7')
+            ">7</button>
+            <button onclick="
+              addToCalculation('8');
+            ">8</button>
+            <button onclick="
+              addToCalculation('9')
+            ">9</button>
+          </div>
+          <div>
+            <button onclick="
+              addToCalculation('0')
+            ">0</button>
+            <button class="point-button" onclick="
+              addToCalculation('.')
+            ">.</button>
+              <button>OFF</button>
+          </div>
+        </div>
+        <div class="side-operations">
+          <button onclick="
+          addToCalculation('+')
+        ">+</button>
+          <button onclick="
+          addToCalculation('*')
+        ">*</button>
+          <button class="equals-button" onclick="
+          document.querySelector('.after-calculation').innerHTML = calculation;
+          calculation = eval(calculation);
+          document.querySelector('.calculation-input').innerHTML = calculation;
+          localStorage.setItem('calculation', calculation);
+        ">=</button>
+          <button>ON</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="calculator.js"></script>
+</body>
+</html>

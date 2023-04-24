@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.environment-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(black, white, black);
+}
+.calculator{
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4.5px;
+  padding: 25px 5px 5px;
+  border: solid 1px #333;
+}
+.display-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calc-brand span{
+  color: rgb(80, 173, 255);
+  font-weight: 700;
+}
+.calc-brand{
+  margin-bottom: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+}
+.display-area .display-box{
+  height: 8em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: solid 1px #333;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+  position: relative;
+}
+.after-calculation{
+  position: absolute;
+  bottom: 38px;
+  right: 5px;
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: 600;
+  color: rgba(80, 173, 255, 0.5);
+}
+.calculation-input{
+  position: absolute;
+  bottom: -2px;
+  right: 5px;
+  font-size: 40px;
+  font-family: Arial;
+  font-weight: 700;
+  color: #333;
+}
+.number-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 232px;
+}
+.one-three{
+  margin: 4.5px 0;
+}
+.four-six{
+  margin-bottom: 4.5px;
+}
+.seven-nine{
+  margin-bottom: 4.5px;
+}
+.number-input button{
+  width: 5.5em;
+  height: 3.8em;
+  cursor: pointer;
+}
+.top-operations button{
+  width: 5.5em;
+  height: 3.8em;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+.side-operations{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5px;
+  justify-content: space-between;
+}
+.side-operations button{
+  display: inline-block;
+  width: 5.5em;
+  height: 3.8em;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+@media (hover: hover){
+  .side-operations button:hover, .top-operations button:hover, .number-input button:hover{
+    color: rgb(80, 173, 255);
+    background-color: aliceblue;
+    border-color: rgb(80, 173, 255);
+  }
+}
+
+.side-operations button:active, .top-operations button:active, .number-input button:active{
+  opacity: 0.7;
+}
+.equals-button{
+  height: 8em;
+}
+.side-and-number{
+  display: flex;
+  
+}
+.point-button{
+  width: 8em;
+}
+button{
+  border-radius: 4px;
+  color: aliceblue;
+  background-color: rgb(80, 173, 255);
+  border: solid 1px #333;
+  box-sizing: border-box;
+}
